@@ -1,0 +1,71 @@
+
+.navbar {
+   box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.05);
+}
+
+.nav-link {
+   font-family: 'Open Sans', sans-serif;
+   font-size: 14px;
+   font-weight: 500;
+   letter-spacing: 1.25px;
+   color: #1A120B;
+   margin-right: 10px;
+}
+
+.button-icon {
+   background-color: #1A120B;
+   border: 0;
+   font-size: 14px;
+   color: #fff;
+}
+.button-icon:hover {
+   background-color: #D5CEA3;
+   color: #1A120B;
+}
+
+.i-btn {
+   font-size: 16px !important;
+}
+
+.button-primary {
+   background-color: #D5CEA3;
+   border: 0;
+   font-family: 'Open Sans', sans-serif;
+   font-size: 14px;
+   font-weight: 500;
+   letter-spacing: 1.25px;
+   color: #1A120B;
+}
+
+.button-secondary {
+   background-color: #fff;
+   border: 1;
+   border-color: #3C2A21;
+   font-family: 'Open Sans', sans-serif;
+   font-weight: 500;
+   letter-spacing: 1.25px;
+   color: #1A120B;
+}
+.button-heading {
+   padding: 14px 20px;
+   font-size: 18px;
+}
+
+.button-primary:hover, .button-secondary:hover{
+   color: #fff;
+   background-color: #3C2A21;
+}
+
+.heading-1 {
+   color: #3C2A21;
+   font-family: 'Inter', sans-serif;
+   font-size: 36px;
+   font-weight: 300;
+   line-height: normal;
+}
+
+.inline-icon {
+   vertical-align: bottom;
+   font-size: 26px !important;
+   margin-right: 15px;
+}
