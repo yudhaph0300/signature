@@ -51,6 +51,7 @@ body {
 .button-heading {
    padding: 14px 20px;
    font-size: 18px;
+   margin-right: 10px
 }
 
 .button-primary:hover, .button-secondary:hover{
@@ -92,5 +93,38 @@ body {
  .icon-with-text i {
    font-size: 48px;
    margin-right: 20px;
+ }
+
+
+ /* Phone */
+ @media (max-width: 576px) {
+
+   .hero-headline {
+      margin: 100px 0;
+   }
+   .heading-1 {
+      color: #3C2A21;
+      font-size: 24px;
+      font-weight: 300;
+      line-height: normal;
+   }
+   .button-heading {
+      font-size: 14px;
+      width: 100%;
+      margin-bottom: 10px;
+   }
+   .inline-icon {
+      vertical-align: bottom;
+      font-size: 20px !important;
+      margin-right: 15px;
+   }
+
+   .font-1-20 {
+      font-size: 16px;
+   }
+   
+   .icon-with-text i {
+      font-size: 32px;
+    }
  }
 
