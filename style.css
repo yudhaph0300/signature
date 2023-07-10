@@ -102,6 +102,11 @@ body {
    .hero-headline {
       margin: 100px 0;
    }
+   
+ }
+
+ /* Tablet */
+ @media (max-width: 790px) {
    .heading-1 {
       color: #3C2A21;
       font-size: 24px;
@@ -109,7 +114,7 @@ body {
       line-height: normal;
    }
    .button-heading {
-      font-size: 14px;
+      font-size: 14px;  
       width: 100%;
       margin-bottom: 10px;
    }
