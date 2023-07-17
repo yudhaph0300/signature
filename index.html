@@ -244,7 +244,7 @@
       });
 
       function fetchDataAndDisplayCards() {
-        const url = "http://localhost:3000/best-product"; // Ganti dengan URL API yang sesuai
+        const url = "https://64b4f3bbf3dbab5a95c65e93.mockapi.io/best-seller"; // Ganti dengan URL API yang sesuai
         fetch(url)
           .then((response) => response.json())
           .then((data) => {
@@ -281,7 +281,7 @@
 
         const text = document.createElement("p");
         text.classList.add("f-card-text", "mt-auto");
-        text.textContent = item.price; // Ganti dengan properti data yang ingin ditampilkan
+        text.textContent = "$ " + item.price; // Ganti dengan properti data yang ingin ditampilkan
 
         const title = document.createElement("h5");
         title.classList.add("f-card-title");
