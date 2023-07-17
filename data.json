@@ -1,0 +1,9 @@
+{
+   "best-product": [
+     { "id": 1, "name": "Snow Chair", "price": 130000 },
+     { "id": 2, "name": "White Sofa", "price": 250000 },
+     { "id": 3, "name": "Wooden Chair", "price": 95000 },
+     { "id": 4, "name": "Family Sofa", "price": 235000 }
+   ]
+ }
+ 

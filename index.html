@@ -123,7 +123,7 @@
     <div class="container-fluid services">
       <div class="container">
         <div class="font-1-20">WHY CHOOSE US?</div>
-        <div class="heading-1 text-white font-weight-bold mt-5">
+        <div class="heading-1 text-white font-weight-bold mt-4">
           Ensuring Uncompromising Quality: Our Commitment to Customer
           Satisfaction and Trust.
         </div>
@@ -150,6 +150,151 @@
         </div>
       </div>
     </div>
+
+    <!-- End Services -->
+
+    <!-- Start Products -->
+    <div class="container-fluid best-seller">
+      <div class="container">
+        <div class="font-1-20">OUR PRODUCTS</div>
+        <div class="heading-1 font-weight-bold mt-4">
+          This month's best seller
+        </div>
+      </div>
+
+      <div class="container-fluid">
+        <div
+          class="row justify-content-center align-items-center mt-4"
+          id="data-best-product"
+        ></div>
+
+        <a href="" class="btn button-link mt-4 d-flex justify-content-center"
+          >All Products</a
+        >
+      </div>
+    </div>
+
+    <!-- End Products -->
+
+    <!-- Start Footer -->
+    <div class="container-fluid footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <a href="#"><img src="Assets/logo.png" height="24" alt="" /></a>
+            <p class="text-description mt-4">
+              Signature is a furniture company created to cater to families'
+              needs with a touch of aesthetics in its furniture. We consistently
+              pay attention to detail and provide clear communication to our
+              customers. Our design priority lies in the quality of furniture
+              and customer satisfaction.
+              <br /><br />
+              ©Copyright 2023 Signature
+            </p>
+          </div>
+          <div class="col-md-2">
+            <div class="text-title">Support</div>
+            <div class="mt-4">
+              <li>
+                <a class="text-description" href="">FAQ</a>
+              </li>
+              <li>
+                <a class="text-description" href="">Shipping & Returns</a>
+              </li>
+            </div>
+          </div>
+
+          <div class="col-md-2">
+            <div class="text-title">Social Media</div>
+            <div class="mt-4">
+              <li>
+                <a class="text-description" href="">Instagram</a>
+              </li>
+              <li>
+                <a class="text-description" href="">Facebook</a>
+              </li>
+              <li>
+                <a class="text-description" href="">Twitter</a>
+              </li>
+              <li>
+                <a class="text-description" href="">Tiktok</a>
+              </li>
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="text-title">About Us</div>
+
+            <div class="mt-4">
+              <li>
+                <a class="text-description" href="">Our Story</a>
+              </li>
+              <li>
+                <a class="text-description" href="">Designer</a>
+              </li>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Footer -->
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        fetchDataAndDisplayCards();
+      });
+
+      function fetchDataAndDisplayCards() {
+        const url = "http://localhost:3000/best-product"; // Ganti dengan URL API yang sesuai
+        fetch(url)
+          .then((response) => response.json())
+          .then((data) => {
+            displayDataAsCards(data);
+          })
+          .catch((error) => {
+            console.error("Terjadi kesalahan:", error);
+          });
+      }
+
+      function displayDataAsCards(data) {
+        const dataContainer = document.getElementById("data-best-product");
+
+        data.forEach((item) => {
+          const card = createCard(item);
+          dataContainer.appendChild(card);
+        });
+      }
+
+      function createCard(item) {
+        const col = document.createElement("div");
+        col.classList.add("col-md-3", "mt-3");
+
+        const card = document.createElement("div");
+        card.classList.add("card");
+
+        const cardBody = document.createElement("div");
+        cardBody.classList.add(
+          "card-body",
+          "text-white",
+          "d-flex",
+          "flex-column"
+        );
+
+        const text = document.createElement("p");
+        text.classList.add("f-card-text", "mt-auto");
+        text.textContent = item.price; // Ganti dengan properti data yang ingin ditampilkan
+
+        const title = document.createElement("h5");
+        title.classList.add("f-card-title");
+        title.textContent = item.name;
+
+        cardBody.appendChild(text);
+        cardBody.appendChild(title);
+        card.appendChild(cardBody);
+        col.appendChild(card);
+
+        return col;
+      }
+    </script>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
