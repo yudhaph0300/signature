@@ -109,8 +109,6 @@ body {
  }
 
  .best-seller .card {
-   background-image: url('Assets/best-seller/bs-1.png');
-   background-size: cover;
    height: 360px;
    border: none;
    border-radius: 0;

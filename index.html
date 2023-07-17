@@ -157,8 +157,15 @@
     <div class="container-fluid best-seller">
       <div class="container">
         <div class="font-1-20">OUR PRODUCTS</div>
-        <div class="heading-1 font-weight-bold mt-4">
-          This month's best seller
+        <div class="row">
+          <div class="col-md-10">
+            <div class="heading-1 font-weight-bold mt-4">
+              This month's best seller
+            </div>
+          </div>
+          <div class="col-md-2">
+            <a href="" class="btn button-primary mt-4 mx-auto">All Products</a>
+          </div>
         </div>
       </div>
 
@@ -167,10 +174,6 @@
           class="row justify-content-center align-items-center mt-4"
           id="data-best-product"
         ></div>
-
-        <a href="" class="btn button-link mt-4 d-flex justify-content-center"
-          >All Products</a
-        >
       </div>
     </div>
 
@@ -270,6 +273,8 @@
 
         const card = document.createElement("div");
         card.classList.add("card");
+        card.style.backgroundImage = "url(" + item.img + ")";
+        card.style.backgroundSize = "cover";
 
         const cardBody = document.createElement("div");
         cardBody.classList.add(
@@ -281,7 +286,7 @@
 
         const text = document.createElement("p");
         text.classList.add("f-card-text", "mt-auto");
-        text.textContent = "$ " + item.price; // Ganti dengan properti data yang ingin ditampilkan
+        text.textContent = "Rp. " + item.price;
 
         const title = document.createElement("h5");
         title.classList.add("f-card-title");
